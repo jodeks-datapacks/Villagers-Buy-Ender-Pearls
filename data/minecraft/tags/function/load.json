@@ -1,6 +1,5 @@
 {
   "values": [
-    "villagers_buy_ender_pearls:app/setup",
-    "villagers_buy_ender_pearls:app/load_message"
+    "villagers_buy_ender_pearls:app/setup"
   ]
 }
