@@ -1,2 +1,0 @@
-data modify storage villagers_buy_ender_pearls:image data.current.pixel_color set from storage villagers_buy_ender_pearls:image data.background_color
-function villagers_buy_ender_pearls:image/process/build_pixel with storage villagers_buy_ender_pearls:image data.current

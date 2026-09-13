@@ -1,7 +1,0 @@
-{
-  "criteria": {
-    "villager_check": {
-      "trigger": "minecraft:impossible"
-    }
-  }
-}

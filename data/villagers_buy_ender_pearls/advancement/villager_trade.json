@@ -3,25 +3,32 @@
     "villager_check": {
       "trigger": "minecraft:villager_trade",
       "conditions": {
-        "villager": [
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:entity_properties",
+        "villager": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:inverted",
+              "term": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:entity_tags": {
+                    "all_of": [
+                      "villagers_buy_ender_pearls.modified"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "type": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "nbt": "{Tags:villagers_buy_ender_pearls.modified}"
+                "minecraft:nbt": "{VillagerData:{profession:\"minecraft:cleric\",level:5}}"
               }
             }
-          },
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "nbt": "{VillagerData:{profession:\"minecraft:cleric\",level:5}}"
-            }
-          }
-        ]
+          ]
+        }
       }
     }
   },
